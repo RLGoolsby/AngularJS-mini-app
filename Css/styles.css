@@ -7,7 +7,7 @@ body{
 
 
 
- a:visited {
+ a, a:visited {
 	outline:none;
 	color:#389dc1;
 }
