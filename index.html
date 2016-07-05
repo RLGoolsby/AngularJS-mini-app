@@ -12,14 +12,15 @@
     <link rel="stylesheet" href="Css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
-  <body>
 
-    <form ng-app ng-controller="OrderFormController">
+  <body ng-app="myApp" >
+    <section class="wrapper">
+    <form ng-controller="OrderFormController">
 
       <h1>Coffee</h1>
 
       <ul>
-        <li ng-repeat="coffee in coffees" ng-click="toggelActive(coffee)" ng-class"{{active: coffee.active}}">
+        <li ng-repeat="coffee in coffee" ng-click="toggelActive(coffee)" ng-class"{{active: coffee.active}}">
           {{coffee.name}}<span>{{coffee.price | currency}}</span>
         </li>
       </ul>
@@ -28,6 +29,7 @@
         Total: <span>{{total() | currency}}</span>
       </div>
     </form>
+  </section>
 
 
 
