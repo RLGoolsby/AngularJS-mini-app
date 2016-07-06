@@ -17,12 +17,12 @@ myApp.controller('OrderFormController', function ($scope){
         {
           name: "African",
           price: 20,
-          active: false
+          active: true
         },
         {
           name: "Indonesian",
           price: 25,
-          active: false
+          active: true
         },
         {
           name: "Peru",
@@ -31,7 +31,7 @@ myApp.controller('OrderFormController', function ($scope){
         }
     ]
 
-    $scope.toggleActive = function(s){
+    $scope.toggleActive = function(){// I think this needs more code to work correctly //
         s.active = !s.active;
       };
 
@@ -39,8 +39,15 @@ myApp.controller('OrderFormController', function ($scope){
       $scope.total = function() {
             var total = 0;
             angular.forEach($scope.coffee, function(s) {
-              // if(s.active){
+              if(s.active){
                 total += s.price;
+              }
+              // if(!s.active){
+              //   total -= s.price;
+              // }
+              // else
+              //   (!s.active){}
+              //   total -= s.price;
               // }
             })
 

@@ -18,10 +18,10 @@
     <section  class="wrapper">
     <form ng-app="myApp" ng-controller="OrderFormController">
 
-      <h1>Coffee</h1>
+      <h1>Coffee<i class="fa fa-coffee" aria-hidden="true"></i></h1>
 
       <ul>
-        <li ng-repeat="coffee in coffee" ng-click="toggelActive(coffee)" ng-class"{{active: coffee.active}}">
+        <li ng-repeat="coffee in coffee" ng-class"coffee.active"  ng-click="coffee.active = !coffee.active"><!--ng-click="toggelActive(active)" -->
           {{coffee.name}}<span>{{coffee.price | currency}}</span>
         </li>
       </ul>
