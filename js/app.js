@@ -1,14 +1,12 @@
 
-var myApp = angular.module("myApp", []);
+var myApp = angular.module("myApp",[]);
 
-myApp.controller('OrderFormController', function($scope){
+myApp.controller('OrderFormController', function ($scope){
 
 
 
 
 // function OrderFormController($scope){
-
-
     $scope.coffee= [
 
         {
@@ -32,22 +30,35 @@ myApp.controller('OrderFormController', function($scope){
           active: false
         }
     ]
-});
+
     $scope.toggleActive = function(s){
-    		s.active = !s.active;
-    	};
-
-      $scope.total = function(){
-
-        var total = 0;
-
-        angular.forEach($scope.coffee, function(s){
-          if (s.active){
-            total+= s.price;
-          }
-        });
-
-      return total;
-
+        s.active = !s.active;
       };
-    
+
+
+      $scope.total = function() {
+            var total = 0;
+            angular.forEach($scope.coffee, function(s) {
+              // if(s.active){
+                total += s.price;
+              // }
+            })
+
+            return total;
+        };
+
+      // $scope.total = function(){
+      //
+      //   var total = 0;
+      //
+      //   angular.forEach($scope.coffee, function(s){
+      //     if (s.active){
+      //       total+= s.price;
+      //     }
+      //
+      //   });
+
+      // return total;
+
+      // };
+      });
