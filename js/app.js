@@ -54,6 +54,22 @@ myApp.controller('OrderFormController', function ($scope){
             return total;
         };
 
+            // $scope.reset{};
+
+            // var buyer = angular.copy($scope.buyer)
+            // $scope.resetForm = function(){// want to clear total //
+
+              // $scope.buyer = angular.copy(buyer);
+              // $scope.resetForm = $setPrestine();
+            // };
+            // $scope.isbuyerChanged = function(){
+
+            // }
+            // return !angular.equals($scope.person, buyer);
+
+
+
+        // }
       // $scope.total = function(){
       //
       //   var total = 0;

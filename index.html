@@ -16,7 +16,7 @@
 
   <body>
     <section  class="wrapper">
-    <form ng-app="myApp" ng-controller="OrderFormController">
+    <form name="buyer" ng-app="myApp" ng-controller="OrderFormController">
 
       <h1>Coffee<i class="fa fa-coffee" aria-hidden="true"></i></h1>
 
@@ -29,6 +29,8 @@
       <div class="total">
         Total: <span>{{total() | currency}}</span>
       </div>
+
+      <button type="button"  ng-click="resetForm()" ng-disabled="!buyerChanged">Reset</button>
     </form>
   </section>
 
